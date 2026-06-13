@@ -1,0 +1,33 @@
+.wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.icon { font-size: 12px; line-height: 1; }
+
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.bar {
+  width: 52px;
+  height: 3px;
+  background-color: var(--color-border);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
+  border-radius: var(--radius-full);
+  transition: width 0.4s ease;
+}
+
+.label {
+  font-size: 10px;
+  font-weight: 700;
+  white-space: nowrap;
+}

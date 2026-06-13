@@ -1,0 +1,407 @@
+/* ── Page ──────────────────────────────────── */
+.page {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Not found ─────────────────────────────── */
+.notFoundPage {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-8);
+}
+
+.notFoundCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+  text-align: center;
+  max-width: 400px;
+  padding: var(--space-10);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+}
+
+.notFoundIcon {
+  font-size: 48px;
+  filter: grayscale(0.5);
+}
+
+.notFoundTitle {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--color-text-primary);
+}
+
+.notFoundSub {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+.notFoundCode {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  background-color: var(--color-surface-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 1px 6px;
+  color: var(--color-brand-light);
+}
+
+.notFoundBtn {
+  margin-top: var(--space-2);
+  padding: var(--space-3) var(--space-6);
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  background-color: var(--color-brand);
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.notFoundBtn:hover {
+  background-color: var(--color-brand-dark);
+}
+
+/* ── Breadcrumb ────────────────────────────── */
+.breadcrumb {
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--space-3) var(--space-6);
+  background-color: var(--color-surface);
+}
+
+.breadcrumbInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-6);
+  flex-wrap: wrap;
+}
+
+.backBtn {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  transition: color var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.backBtn:hover {
+  color: var(--color-text-primary);
+}
+
+.breadcrumbStep {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.stepActive {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--color-brand-light);
+}
+
+.stepInactive {
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+.stepSep {
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+/* ── Bus info bar ──────────────────────────── */
+.busBar {
+  background-color: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--space-4) var(--space-6);
+}
+
+.busBarInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+  flex-wrap: wrap;
+}
+
+.busBarLeft {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-width: 160px;
+  flex-shrink: 0;
+}
+
+.busOpLogo {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  background: linear-gradient(135deg, var(--color-brand-dark), var(--color-brand));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: 800;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.busOpInfo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.busOpName {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+/* ── Route in bus bar ──────────────────────── */
+.busBarRoute {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  justify-content: center;
+}
+
+.busBarTimeGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.busBarTime {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--color-text-primary);
+  letter-spacing: -0.03em;
+  font-variant-numeric: tabular-nums;
+}
+
+.busBarCity {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+}
+
+.busBarMid {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
+  max-width: 120px;
+}
+
+.busBarDuration {
+  font-size: 11px;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+.busBarLine {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, var(--color-border), var(--color-border-light), var(--color-border));
+}
+
+/* ── Right price block in bus bar ──────────── */
+.busBarRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--space-1);
+  flex-shrink: 0;
+}
+
+.busBarPriceLabel {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-muted);
+}
+
+.busBarPrice {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--color-text-primary);
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+}
+
+.busBarAmenities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  justify-content: flex-end;
+}
+
+.amenityPill {
+  font-size: 10px;
+  color: var(--color-text-muted);
+  background-color: var(--color-surface-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  padding: 1px 6px;
+}
+
+/* ── Main content area ─────────────────────── */
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  padding: var(--space-6);
+  display: flex;
+  gap: var(--space-6);
+  align-items: flex-start;
+}
+
+/* ── Seat map panel ────────────────────────── */
+.seatPanel {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.seatPanelHeader {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.seatPanelTitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  letter-spacing: -0.02em;
+}
+
+.seatPanelSub {
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+/* ── Deck label ────────────────────────────── */
+.deckLabel {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  padding: var(--space-2) var(--space-4);
+  background-color: var(--color-surface-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  display: inline-block;
+}
+
+/* ── Seat map scroll container ─────────────── */
+.seatMapWrap {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8) var(--space-6);
+  overflow-x: auto;
+  display: flex;
+  justify-content: center;
+}
+
+/* ── Mobile selection strip ────────────────── */
+.mobileSelectionStrip {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-3) var(--space-4);
+  background: linear-gradient(90deg, var(--color-brand-dark), var(--color-brand));
+  border-radius: var(--radius-md);
+  color: #fff;
+}
+
+.mobileStripLabel {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.mobileStripScroll {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+/* ── Summary column ────────────────────────── */
+.summaryCol {
+  width: 300px;
+  flex-shrink: 0;
+}
+
+/* ── Responsive ────────────────────────────── */
+@media (max-width: 900px) {
+  .content {
+    flex-direction: column;
+    padding: var(--space-4);
+  }
+
+  .summaryCol {
+    width: 100%;
+  }
+
+  /* PriceSummary not sticky on mobile */
+  .summaryCol :global(.card) {
+    position: static;
+  }
+
+  .mobileSelectionStrip {
+    display: flex;
+  }
+
+  .breadcrumbStep {
+    display: none;
+  }
+
+  .busBarRoute {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .busBar {
+    padding: var(--space-3) var(--space-4);
+  }
+
+  .breadcrumb {
+    padding: var(--space-3) var(--space-4);
+  }
+
+  .seatMapWrap {
+    padding: var(--space-6) var(--space-4);
+  }
+
+  .busBarRight {
+    display: none;
+  }
+}

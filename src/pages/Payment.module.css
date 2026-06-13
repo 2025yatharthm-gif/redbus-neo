@@ -1,0 +1,361 @@
+.page {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  padding: var(--space-6);
+  display: flex;
+  gap: var(--space-6);
+  align-items: flex-start;
+}
+
+.mainCol {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+/* ── Section ─────────────────────────────── */
+.sectionTitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-4);
+}
+
+/* ── Method tabs ─────────────────────────── */
+.methodTabs {
+  display: flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.methodTab {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-5);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  flex: 1;
+  min-width: 160px;
+  text-align: left;
+  transition: border-color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.methodTab:hover {
+  border-color: var(--color-border-light);
+}
+
+.methodActive {
+  border-color: var(--color-brand) !important;
+  background-color: rgba(213, 43, 30, 0.04);
+  box-shadow: 0 0 0 1px var(--color-brand);
+}
+
+.methodIcon {
+  font-size: 22px;
+  flex-shrink: 0;
+}
+
+.methodLabel {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.methodDesc {
+  font-size: 11px;
+  color: var(--color-text-muted);
+  margin-top: 1px;
+}
+
+/* ── Pay card ────────────────────────────── */
+.payCard {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+}
+
+/* ── UPI ─────────────────────────────────── */
+.upiPanel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.upiApps {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.upiApp {
+  padding: var(--space-2) var(--space-4);
+  font-size: 13px;
+  font-weight: 700;
+  background-color: var(--color-surface-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  color: var(--color-text-secondary);
+  transition: all var(--transition-fast);
+}
+
+.upiApp:hover {
+  border-color: var(--color-brand);
+  color: var(--color-text-primary);
+}
+
+.upiAppActive {
+  background-color: rgba(213, 43, 30, 0.1);
+  border-color: var(--color-brand);
+  color: var(--color-brand-light);
+}
+
+.upiOr {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+/* ── Card ────────────────────────────────── */
+.cardPanel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.cardRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+/* ── Wallet ──────────────────────────────── */
+.walletPanel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.walletOption {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  background-color: var(--color-surface-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  text-align: left;
+  transition: border-color var(--transition-fast);
+}
+
+.walletOption:hover {
+  border-color: var(--color-border-light);
+}
+
+.walletActive {
+  border-color: var(--color-brand);
+  background-color: rgba(213, 43, 30, 0.04);
+}
+
+.walletRadio {
+  font-size: 16px;
+  color: var(--color-brand);
+  width: 20px;
+  flex-shrink: 0;
+}
+
+.walletName {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+/* ── Field helpers ─────────────────────────── */
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.fieldLabel {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.fieldInput {
+  background-color: var(--color-surface-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  color: var(--color-text-primary);
+  padding: var(--space-3) var(--space-4);
+  font-size: 14px;
+  height: 44px;
+  outline: none;
+  transition: border-color var(--transition-fast);
+  width: 100%;
+}
+
+.fieldInput:focus { border-color: var(--color-brand); }
+.fieldInput::placeholder { color: var(--color-text-muted); }
+.fieldError { border-color: #EF4444 !important; }
+
+.errorMsg {
+  font-size: 11px;
+  color: #EF4444;
+  font-weight: 500;
+}
+
+/* ── Actions ─────────────────────────────── */
+.actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.backBtn {
+  padding: var(--space-3) var(--space-5);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  background-color: var(--color-surface-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.backBtn:hover {
+  color: var(--color-text-primary);
+}
+
+.payBtn {
+  padding: var(--space-4) var(--space-8);
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  background-color: var(--color-brand);
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.payBtn:hover { background-color: var(--color-brand-dark); }
+
+.secureNote {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  text-align: center;
+  padding-bottom: var(--space-8);
+}
+
+/* ── Processing / Success / Failed screens ── */
+.processingScreen {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  padding: var(--space-16);
+  text-align: center;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.processingSpinner {
+  width: 56px;
+  height: 56px;
+  border: 3px solid var(--color-border);
+  border-top-color: var(--color-brand);
+  border-radius: 50%;
+  animation: spin 0.9s linear infinite;
+}
+
+.processingTitle {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  letter-spacing: -0.02em;
+}
+
+.processingSub {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+}
+
+.processingAmount {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--color-brand-light);
+  letter-spacing: -0.03em;
+}
+
+.successIcon {
+  width: 64px;
+  height: 64px;
+  background-color: var(--color-success);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: #fff;
+  font-weight: 800;
+}
+
+.failedIcon {
+  width: 64px;
+  height: 64px;
+  background-color: #EF4444;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #fff;
+  font-weight: 800;
+}
+
+.retryBtn {
+  padding: var(--space-3) var(--space-8);
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  background-color: var(--color-brand);
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  margin-top: var(--space-2);
+}
+
+/* ── Responsive ──────────────────────────── */
+@media (max-width: 900px) {
+  .content { flex-direction: column; padding: var(--space-4); }
+}
+
+@media (max-width: 500px) {
+  .cardRow { grid-template-columns: 1fr; }
+  .methodTab { min-width: 100%; }
+}

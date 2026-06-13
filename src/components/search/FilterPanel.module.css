@@ -1,0 +1,201 @@
+.panel {
+  width: 240px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 76px;
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-border) transparent;
+}
+
+.panel::-webkit-scrollbar {
+  width: 4px;
+}
+
+.panel::-webkit-scrollbar-thumb {
+  background-color: var(--color-border);
+  border-radius: 2px;
+}
+
+@media (max-width: 900px) {
+  .panel {
+    display: none;
+  }
+}
+
+/* ── Header ───────────────────────────────── */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-5);
+}
+
+.title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  letter-spacing: -0.01em;
+}
+
+.resetBtn {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-brand-light);
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  transition: color var(--transition-fast);
+}
+
+.resetBtn:hover {
+  color: var(--color-brand);
+}
+
+/* ── Group ──────────────────────────────── */
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-4) 0;
+}
+
+.groupTitle {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-1);
+}
+
+.divider {
+  height: 1px;
+  background-color: var(--color-border);
+}
+
+/* ── Checkbox rows ──────────────────────── */
+.checkRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  cursor: pointer;
+  padding: var(--space-1) 0;
+}
+
+.check {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--color-brand);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.checkLabel {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  transition: color var(--transition-fast);
+}
+
+.checkRow:hover .checkLabel {
+  color: var(--color-text-primary);
+}
+
+.starHint {
+  color: var(--color-warning);
+}
+
+/* ── Price inputs ───────────────────────── */
+.priceInputs {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--space-3);
+}
+
+.priceField {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.priceLabel {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.priceInputWrap {
+  display: flex;
+  align-items: center;
+  background-color: var(--color-surface-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: var(--space-2) var(--space-3);
+  gap: 2px;
+  transition: border-color var(--transition-fast);
+}
+
+.priceInputWrap:focus-within {
+  border-color: var(--color-brand);
+}
+
+.priceCurrency {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  flex-shrink: 0;
+}
+
+.priceInput {
+  background: none;
+  border: none;
+  outline: none;
+  color: var(--color-text-primary);
+  font-size: 13px;
+  font-weight: 600;
+  width: 100%;
+  min-width: 0;
+  /* hide spinners */
+  -moz-appearance: textfield;
+}
+
+.priceInput::-webkit-inner-spin-button,
+.priceInput::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+.priceSep {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  flex-shrink: 0;
+  margin-bottom: 8px;
+}
+
+/* ── Range track ────────────────────────── */
+.rangeTrack {
+  height: 3px;
+  background-color: var(--color-border);
+  border-radius: var(--radius-full);
+  position: relative;
+  margin-top: var(--space-3);
+}
+
+.rangeFill {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background-color: var(--color-brand);
+  border-radius: var(--radius-full);
+}
+
+.rangeBounds {
+  display: flex;
+  justify-content: space-between;
+  margin-top: var(--space-2);
+  font-size: 11px;
+  color: var(--color-text-muted);
+}

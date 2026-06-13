@@ -1,0 +1,82 @@
+.card {
+  background-color: var(--color-surface-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4) var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+}
+
+.item {
+  display: flex;
+  gap: var(--space-2);
+  align-items: flex-start;
+}
+
+.itemIcon { font-size: 16px; flex-shrink: 0; margin-top: 2px; }
+
+.itemBody { display: flex; flex-direction: column; gap: 3px; }
+
+.itemLabel {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-muted);
+}
+
+.itemVal {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+
+.trafficBar {
+  width: 100%;
+  height: 4px;
+  background-color: var(--color-border);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.trafficFill {
+  height: 100%;
+  border-radius: var(--radius-full);
+}
+
+.roadScore {
+  display: flex;
+  gap: 2px;
+}
+
+.roadDot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: var(--color-border);
+}
+
+.roadDotFill { background-color: #3B82F6; }
+
+.disclaimer {
+  font-size: 10px;
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+@media (max-width: 600px) {
+  .grid { grid-template-columns: 1fr; }
+}

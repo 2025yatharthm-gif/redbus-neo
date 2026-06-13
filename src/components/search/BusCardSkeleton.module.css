@@ -1,0 +1,100 @@
+/* Shimmer keyframe */
+@keyframes shimmer {
+  0%   { background-position: -600px 0; }
+  100% { background-position:  600px 0; }
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+  padding: var(--space-5) var(--space-6);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+}
+
+/* Base shimmer block */
+.skel {
+  border-radius: var(--radius-sm);
+  background:
+    linear-gradient(
+      90deg,
+      var(--color-surface-2) 0%,
+      var(--color-border)    50%,
+      var(--color-surface-2) 100%
+    );
+  background-size: 600px 100%;
+  animation: shimmer 1.6s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skel {
+    animation: none;
+    background: var(--color-surface-2);
+  }
+}
+
+/* ── Operator col ─────────────────────── */
+.operatorCol {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-width: 180px;
+}
+
+.logo {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  flex-shrink: 0;
+}
+
+.operatorLines {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  flex: 1;
+}
+
+/* ── Route col ─────────────────────────── */
+.routeCol {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.time {
+  width: 52px;
+  height: 28px;
+}
+
+.lineFill {
+  flex: 1;
+  height: 10px;
+}
+
+/* ── Meta col ──────────────────────────── */
+.metaCol {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  min-width: 72px;
+  align-items: center;
+}
+
+/* ── Price col ─────────────────────────── */
+.priceCol {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--space-3);
+  min-width: 120px;
+}
+
+/* Shared sizes */
+.lineWide   { width: 110px; height: 14px; }
+.lineNarrow { width: 64px;  height: 12px; }
+.priceSkel  { width: 80px;  height: 26px; }
+.btnSkel    { width: 96px;  height: 32px; border-radius: var(--radius-sm); }

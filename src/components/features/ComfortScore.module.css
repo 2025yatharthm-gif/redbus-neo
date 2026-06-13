@@ -1,0 +1,28 @@
+.wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.icon { font-size: 12px; line-height: 1; }
+
+.bar {
+  flex: 1;
+  min-width: 40px;
+  height: 4px;
+  background-color: var(--color-border);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
+  border-radius: var(--radius-full);
+  transition: width 0.4s ease;
+}
+
+.val { font-size: 11px; font-weight: 700; font-variant-numeric: tabular-nums; }
+
+.sm .bar { min-width: 36px; }
+.md .bar { min-width: 60px; }
+.md .icon, .md .val { font-size: 13px; }

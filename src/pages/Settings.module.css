@@ -1,0 +1,159 @@
+.page { flex: 1; display: flex; flex-direction: column; }
+
+.header {
+  background-color: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--space-5) var(--space-6);
+}
+
+.headerInner { max-width: 800px; margin: 0 auto; }
+
+.title {
+  font-size: 22px; font-weight: 800;
+  color: var(--color-text-primary); letter-spacing: -0.03em;
+}
+
+.sub { font-size: 13px; color: var(--color-text-secondary); margin-top: 2px; }
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.section { display: flex; flex-direction: column; gap: var(--space-4); }
+
+.sectionTitle {
+  font-size: 16px; font-weight: 700;
+  color: var(--color-text-primary); letter-spacing: -0.01em;
+}
+
+.sectionSub { font-size: 13px; color: var(--color-text-secondary); margin-top: -var(--space-2); }
+
+/* ── Theme ─────────────────────────────── */
+.themeGrid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); }
+
+.themeCard {
+  background-color: var(--color-surface);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  cursor: pointer;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  position: relative;
+  transition: border-color var(--transition-fast);
+}
+
+.themeCard:hover { border-color: var(--color-border-light); }
+
+.themeActive {
+  border-color: var(--color-brand) !important;
+  box-shadow: 0 0 0 1px var(--color-brand);
+}
+
+.themePreview {
+  height: 64px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 8px;
+}
+
+[data-preview="dark"]  { background-color: #0D0D0D; }
+[data-preview="light"] { background-color: #F8F9FA; }
+
+.previewBar { height: 8px; border-radius: 4px; background: var(--color-brand); width: 40%; }
+.previewLines { display: flex; flex-direction: column; gap: 4px; }
+.previewLine  { height: 5px; border-radius: 3px; background: rgba(128,128,128,0.3); width: 100%; }
+
+.themeInfo { display: flex; flex-direction: column; gap: 2px; }
+.themeLabel { font-size: 13px; font-weight: 700; color: var(--color-text-primary); }
+.themeDesc  { font-size: 11px; color: var(--color-text-muted); }
+
+.themeCheck {
+  position: absolute; top: var(--space-3); right: var(--space-3);
+  width: 20px; height: 20px; border-radius: 50%;
+  background-color: var(--color-brand); color: #fff;
+  font-size: 11px; font-weight: 800;
+  display: flex; align-items: center; justify-content: center;
+}
+
+/* ── Currency ───────────────────────────── */
+.currencyGrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-3); }
+
+.currencyCard {
+  background-color: var(--color-surface);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4) var(--space-3);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  position: relative;
+  transition: border-color var(--transition-fast);
+}
+
+.currencyCard:hover { border-color: var(--color-border-light); }
+
+.currencyActive {
+  border-color: var(--color-brand) !important;
+  box-shadow: 0 0 0 1px var(--color-brand);
+  background-color: rgba(213,43,30,0.04);
+}
+
+.currencySymbol {
+  font-size: 24px; font-weight: 800;
+  color: var(--color-text-primary); line-height: 1;
+}
+
+.currencyInfo { display: flex; flex-direction: column; align-items: center; gap: 1px; }
+.currencyCode  { font-size: 12px; font-weight: 700; color: var(--color-text-primary); }
+.currencyLabel { font-size: 10px; color: var(--color-text-muted); text-align: center; }
+
+.currencyCheck {
+  position: absolute; top: 6px; right: 6px;
+  width: 16px; height: 16px; border-radius: 50%;
+  background-color: var(--color-brand); color: #fff;
+  font-size: 9px; font-weight: 800;
+  display: flex; align-items: center; justify-content: center;
+}
+
+.rateNote {
+  font-size: 11px; color: var(--color-text-muted); font-style: italic;
+}
+
+/* ── About ─────────────────────────────── */
+.aboutCard {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  display: flex; flex-direction: column; gap: var(--space-4);
+}
+
+.aboutBrand { font-size: 18px; font-weight: 800; color: var(--color-text-primary); }
+
+.aboutGrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-4); }
+
+.aboutItem { display: flex; flex-direction: column; gap: 2px; }
+.aboutLabel { font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-text-muted); }
+.aboutVal   { font-size: 13px; font-weight: 700; color: var(--color-text-primary); }
+
+/* ── Responsive ─────────────────────────── */
+@media (max-width: 640px) {
+  .content { padding: var(--space-4); }
+  .themeGrid { grid-template-columns: 1fr; }
+  .currencyGrid { grid-template-columns: 1fr 1fr; }
+  .aboutGrid { grid-template-columns: 1fr 1fr; }
+}

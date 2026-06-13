@@ -1,0 +1,90 @@
+.header {
+  position: sticky; top: 0; z-index: 100;
+  background-color: rgba(13, 13, 13, 0.92);
+  border-bottom: 1px solid var(--color-border);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: background-color var(--transition-normal), border-color var(--transition-normal);
+}
+
+[data-theme="light"] .header {
+  background-color: rgba(255,255,255,0.92);
+}
+
+.nav {
+  max-width: 1200px; margin: 0 auto;
+  padding: 0 var(--space-6); height: 60px;
+  display: flex; align-items: center; gap: var(--space-6);
+}
+
+/* ── Brand ──────────────────────────────── */
+.brand { display: flex; align-items: center; gap: var(--space-2); flex-shrink: 0; }
+
+.brandIcon { font-size: 20px; line-height: 1; }
+
+.brandName {
+  font-size: 18px; font-weight: 700;
+  letter-spacing: -0.02em; color: var(--color-text-primary);
+}
+
+.brandAccent { color: var(--color-brand); }
+
+.brandTag {
+  font-size: 10px; font-weight: 600;
+  letter-spacing: 0.12em; color: var(--color-text-muted);
+  vertical-align: super; margin-left: 2px;
+}
+
+/* ── Links ──────────────────────────────── */
+.links {
+  display: flex; align-items: center; gap: var(--space-1); flex: 1;
+}
+
+.link {
+  padding: var(--space-2) var(--space-3);
+  font-size: 13px; font-weight: 500;
+  color: var(--color-text-secondary);
+  border-radius: var(--radius-sm);
+  display: inline-flex; align-items: center; gap: 4px;
+  transition: color var(--transition-fast), background-color var(--transition-fast);
+  white-space: nowrap;
+}
+
+.link:hover   { color: var(--color-text-primary); background-color: var(--color-surface-2); }
+.linkActive   { color: var(--color-text-primary); background-color: var(--color-surface-2); }
+
+.badge {
+  min-width: 17px; height: 17px; padding: 0 4px;
+  background-color: var(--color-brand); color: #fff;
+  border-radius: var(--radius-full); font-size: 10px; font-weight: 800;
+  display: inline-flex; align-items: center; justify-content: center;
+}
+
+/* ── Actions ────────────────────────────── */
+.actions {
+  display: flex; align-items: center; gap: var(--space-1); flex-shrink: 0;
+}
+
+.iconBtn {
+  width: 34px; height: 34px; border-radius: var(--radius-sm);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 16px; line-height: 1;
+  color: var(--color-text-secondary);
+  background: none; border: 1px solid transparent;
+  cursor: pointer;
+  transition: background-color var(--transition-fast), border-color var(--transition-fast);
+  text-decoration: none;
+}
+
+.iconBtn:hover    { background-color: var(--color-surface-2); border-color: var(--color-border); }
+.iconBtnActive    { background-color: var(--color-surface-2); border-color: var(--color-border); }
+
+/* ── Responsive ─────────────────────────── */
+@media (max-width: 768px) {
+  .links { display: none; }
+  .nav { gap: var(--space-4); }
+}
+
+@media (max-width: 400px) {
+  .nav { padding: 0 var(--space-4); }
+}

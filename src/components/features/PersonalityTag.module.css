@@ -1,0 +1,19 @@
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  border-radius: var(--radius-full);
+  border: 1px solid color-mix(in srgb, var(--tag-color) 40%, transparent);
+  background-color: color-mix(in srgb, var(--tag-color) 10%, transparent);
+  color: var(--tag-color);
+  font-weight: 700;
+  cursor: default;
+  white-space: nowrap;
+}
+
+.sm  { padding: 2px 8px;  font-size: 11px; }
+.md  { padding: 4px 10px; font-size: 12px; }
+.lg  { padding: 5px 12px; font-size: 13px; }
+
+.icon  { font-size: 1em; line-height: 1; }
+.label { letter-spacing: 0.01em; }

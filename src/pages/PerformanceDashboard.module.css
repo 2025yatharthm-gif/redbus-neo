@@ -1,0 +1,150 @@
+.page { flex: 1; display: flex; flex-direction: column; }
+
+.header {
+  background-color: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--space-5) var(--space-6);
+}
+
+.headerInner {
+  max-width: 1100px; margin: 0 auto;
+  display: flex; align-items: flex-start; justify-content: space-between; gap: var(--space-4);
+}
+
+.headerLeft { display: flex; flex-direction: column; gap: 3px; }
+
+.title {
+  font-size: 22px; font-weight: 800;
+  color: var(--color-text-primary); letter-spacing: -0.03em;
+}
+
+.sub { font-size: 13px; color: var(--color-text-secondary); }
+
+.refreshBtn {
+  padding: var(--space-2) var(--space-4);
+  font-size: 13px; font-weight: 700;
+  color: var(--color-text-secondary);
+  background-color: var(--color-surface-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.refreshBtn:hover { color: var(--color-text-primary); border-color: var(--color-border-light); }
+
+.content {
+  max-width: 1100px; margin: 0 auto; width: 100%;
+  padding: var(--space-6);
+  display: flex; flex-direction: column; gap: var(--space-8);
+}
+
+/* ── Overview ──────────────────────────── */
+.overviewGrid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-4);
+}
+
+.overviewCard {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  display: flex; flex-direction: column; gap: var(--space-2);
+}
+
+.overviewLabel {
+  font-size: 11px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+}
+
+.overviewVal {
+  font-size: 24px; font-weight: 900;
+  color: var(--color-text-primary); letter-spacing: -0.03em;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ── Section ───────────────────────────── */
+.section { display: flex; flex-direction: column; gap: var(--space-4); }
+
+.sectionTitle {
+  font-size: 15px; font-weight: 700;
+  color: var(--color-text-primary); letter-spacing: -0.01em;
+}
+
+/* ── Metric grid ───────────────────────── */
+.metricGrid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-4);
+}
+
+.metricCard {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4) var(--space-5);
+  display: flex; flex-direction: column; gap: var(--space-3);
+}
+
+.metricHeader {
+  display: flex; justify-content: space-between; align-items: baseline; gap: var(--space-3);
+}
+
+.metricLabel {
+  font-size: 13px; font-weight: 600; color: var(--color-text-primary);
+}
+
+.metricMs {
+  font-size: 18px; font-weight: 900;
+  font-variant-numeric: tabular-nums; letter-spacing: -0.02em;
+}
+
+.metricBar {
+  height: 6px;
+  background-color: var(--color-surface-2);
+  border-radius: var(--radius-full); overflow: hidden;
+}
+
+.metricFill {
+  height: 100%; border-radius: var(--radius-full);
+  transition: width 0.6s ease;
+}
+
+.metricFooter {
+  display: flex; justify-content: space-between; align-items: center;
+}
+
+.metricRating { font-size: 11px; font-weight: 700; }
+.metricTime   { font-size: 10px; color: var(--color-text-muted); font-variant-numeric: tabular-nums; }
+
+.emptyMetrics {
+  padding: var(--space-8);
+  background-color: var(--color-surface);
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  font-size: 14px; color: var(--color-text-muted);
+}
+
+/* ── Legend ────────────────────────────── */
+.legend { display: flex; gap: var(--space-6); flex-wrap: wrap; }
+
+.legendItem { display: flex; align-items: center; gap: var(--space-2); }
+
+.legendDot {
+  width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0;
+}
+
+.legendLabel { font-size: 12px; font-weight: 700; }
+.legendRange { font-size: 12px; color: var(--color-text-muted); }
+
+/* ── Responsive ────────────────────────── */
+@media (max-width: 900px) {
+  .overviewGrid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 500px) {
+  .content { padding: var(--space-4); }
+  .overviewGrid { grid-template-columns: 1fr 1fr; }
+}

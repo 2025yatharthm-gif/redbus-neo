@@ -1,0 +1,121 @@
+.page { flex: 1; display: flex; flex-direction: column; }
+
+.header {
+  background-color: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--space-5) var(--space-6);
+}
+
+.headerInner { max-width: 900px; margin: 0 auto; }
+
+.title {
+  font-size: 22px; font-weight: 800;
+  color: var(--color-text-primary); letter-spacing: -0.03em;
+}
+
+.sub { font-size: 13px; color: var(--color-text-secondary); margin-top: 2px; }
+
+.content {
+  max-width: 900px; margin: 0 auto; width: 100%;
+  padding: var(--space-6);
+  display: flex; flex-direction: column; gap: var(--space-6);
+}
+
+/* ── Progress ──────────────────────────── */
+.progressCard {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  display: flex; flex-direction: column; gap: var(--space-3);
+}
+
+.progressTop {
+  display: flex; justify-content: space-between; align-items: center;
+}
+
+.progressLabel { font-size: 14px; font-weight: 600; color: var(--color-text-primary); }
+.progressPct   { font-size: 20px; font-weight: 900; color: var(--color-brand-light); }
+
+.progressTrack {
+  height: 8px;
+  background-color: var(--color-surface-2);
+  border-radius: var(--radius-full); overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-brand-dark), var(--color-brand-light));
+  border-radius: var(--radius-full);
+  transition: width 0.8s ease;
+}
+
+.progressHint {
+  font-size: 12px; color: var(--color-text-muted); font-style: italic;
+}
+
+/* ── Grid ──────────────────────────────── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: var(--space-4);
+}
+
+/* ── Card ──────────────────────────────── */
+.card {
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  padding: var(--space-5);
+  display: flex;
+  gap: var(--space-4);
+  align-items: flex-start;
+  position: relative;
+  transition: border-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.cardUnlocked {
+  background-color: var(--color-surface);
+  border-color: var(--color-border-light);
+}
+
+.cardUnlocked:hover {
+  border-color: var(--color-brand);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.cardLocked {
+  background-color: var(--color-surface-2);
+  opacity: 0.55;
+}
+
+.cardIcon {
+  font-size: 32px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.cardBody { display: flex; flex-direction: column; gap: 3px; flex: 1; }
+
+.cardLabel {
+  font-size: 14px; font-weight: 700; color: var(--color-text-primary);
+}
+
+.cardDesc {
+  font-size: 12px; color: var(--color-text-secondary); line-height: 1.4;
+}
+
+.cardBadge {
+  position: absolute; top: var(--space-3); right: var(--space-3);
+  font-size: 10px; font-weight: 700;
+  color: #22C55E;
+  background-color: rgba(34, 197, 94, 0.1);
+  border: 1px solid rgba(34, 197, 94, 0.25);
+  border-radius: var(--radius-full);
+  padding: 2px 7px;
+}
+
+@media (max-width: 500px) {
+  .content { padding: var(--space-4); }
+  .grid { grid-template-columns: 1fr; }
+}

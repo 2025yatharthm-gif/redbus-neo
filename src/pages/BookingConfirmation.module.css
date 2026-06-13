@@ -1,0 +1,569 @@
+.page {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Success banner ──────────────────────── */
+.successBanner {
+  background: linear-gradient(90deg, #14532d, #166534);
+  border-bottom: 1px solid #15803d;
+  padding: var(--space-4) var(--space-6);
+}
+
+.successBannerInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.successCheck {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--color-success);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 800;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.successTitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.successSub {
+  font-size: 13px;
+  color: rgba(255,255,255,0.75);
+  margin-top: 2px;
+}
+
+/* ── Content ─────────────────────────────── */
+.content {
+  max-width: 780px;
+  margin: var(--space-8) auto;
+  padding: 0 var(--space-6) var(--space-10);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+/* ── Ticket card ─────────────────────────── */
+.ticketWrap {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+}
+
+/* Ticket header */
+.ticketHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: var(--space-5) var(--space-6);
+  background: linear-gradient(135deg, #1a0a09, #160808);
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+.ticketBrand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--color-text-primary);
+  letter-spacing: -0.02em;
+}
+
+.ticketBrandIcon { font-size: 22px; }
+.ticketBrandRed  { color: var(--color-brand); }
+
+.ticketMeta {
+  display: flex;
+  gap: var(--space-6);
+  align-items: flex-start;
+}
+
+.pnrBlock, .bookingIdBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.metaLabel {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.pnrVal {
+  font-size: 22px;
+  font-weight: 900;
+  color: var(--color-brand-light);
+  letter-spacing: 0.08em;
+  font-variant-numeric: tabular-nums;
+}
+
+.metaVal {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-text-secondary);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Perforation */
+.perforation {
+  display: flex;
+  align-items: center;
+}
+
+.perfLeft, .perfRight {
+  width: 20px;
+  height: 20px;
+  background-color: var(--color-bg);
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin: 0 -10px;
+  z-index: 1;
+}
+
+.perfDots {
+  flex: 1;
+  height: 1px;
+  background-image: repeating-linear-gradient(
+    90deg,
+    var(--color-border) 0px,
+    var(--color-border) 6px,
+    transparent 6px,
+    transparent 12px
+  );
+}
+
+/* Journey section */
+.journeySection {
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.journeyRoute {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.journeyStop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.journeyTime {
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--color-text-primary);
+  letter-spacing: -0.04em;
+  font-variant-numeric: tabular-nums;
+}
+
+.journeyCity {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.journeyMid {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.journeyDuration {
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+.journeyArrowLine {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.journeyLine {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, var(--color-border), var(--color-brand), var(--color-border));
+}
+
+.journeyArrow {
+  font-size: 16px;
+  color: var(--color-brand);
+  flex-shrink: 0;
+}
+
+.journeyMeta {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: var(--space-4);
+  padding-top: var(--space-2);
+  border-top: 1px solid var(--color-border);
+}
+
+.jMetaItem {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.jMetaLabel {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+}
+
+.jMetaVal {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+/* Passengers section */
+.passSection {
+  padding: var(--space-5) var(--space-6);
+}
+
+.passTitle {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-3);
+}
+
+.passList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.passRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-3) var(--space-4);
+  background-color: var(--color-surface-2);
+  border-radius: var(--radius-sm);
+}
+
+.passInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.passName {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  text-transform: capitalize;
+}
+
+.passMeta {
+  font-size: 11px;
+  color: var(--color-text-muted);
+  text-transform: capitalize;
+}
+
+.passSeat {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-brand-light);
+  background-color: rgba(213, 43, 30, 0.1);
+  border-radius: var(--radius-full);
+  padding: 2px var(--space-3);
+}
+
+/* Fare section */
+.fareSection {
+  padding: var(--space-5) var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.fareGrid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.fareItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fareLabel {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+}
+
+.fareVal {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  font-variant-numeric: tabular-nums;
+}
+
+.fareTotal {
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--space-3);
+  margin-top: var(--space-1);
+}
+
+.fareTotalLabel {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.fareTotalVal {
+  font-size: 22px;
+  font-weight: 900;
+  color: var(--color-brand-light);
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+}
+
+.contactRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.contactIcon { font-size: 14px; }
+
+.contactVal {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+}
+
+/* QR section */
+.qrSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-5) var(--space-6);
+  border-top: 1px solid var(--color-border);
+  background-color: var(--color-surface-2);
+}
+
+.qrBox {
+  width: 96px;
+  height: 96px;
+  background-color: #fff;
+  border-radius: var(--radius-sm);
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.qrGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2px;
+  width: 80px;
+  height: 80px;
+}
+
+.qrCell {
+  border-radius: 1px;
+  background-color: #e5e7eb;
+}
+
+.qrDark {
+  background-color: #111;
+}
+
+.qrLabel {
+  font-size: 11px;
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+/* Actions */
+.actions {
+  display: flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.printBtn, .bookingsBtn, .homeBtn {
+  padding: var(--space-3) var(--space-5);
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  border: 1px solid var(--color-border);
+  transition: all var(--transition-fast);
+}
+
+.printBtn {
+  background-color: var(--color-surface-2);
+  color: var(--color-text-secondary);
+}
+
+.printBtn:hover {
+  border-color: var(--color-border-light);
+  color: var(--color-text-primary);
+}
+
+.bookingsBtn {
+  background-color: var(--color-surface-2);
+  color: var(--color-text-secondary);
+}
+
+.bookingsBtn:hover {
+  border-color: var(--color-border-light);
+  color: var(--color-text-primary);
+}
+
+.homeBtn {
+  background-color: var(--color-brand);
+  color: #fff;
+  border-color: var(--color-brand);
+}
+
+.homeBtn:hover {
+  background-color: var(--color-brand-dark);
+}
+
+@media print {
+  .actions { display: none; }
+  .successBanner { display: none; }
+}
+
+@media (max-width: 600px) {
+  .ticketHeader { flex-direction: column; }
+  .pnrBlock, .bookingIdBlock { align-items: flex-start; }
+  .journeyTime { font-size: 22px; }
+  .content { padding: 0 var(--space-4) var(--space-8); }
+}
+
+/* ── Achievements card (Phase 5) ──────── */
+.achievementsCard {
+  background: linear-gradient(135deg,
+    color-mix(in srgb, #F59E0B 8%, var(--color-surface)),
+    var(--color-surface)
+  );
+  border: 1px solid color-mix(in srgb, #F59E0B 30%, var(--color-border));
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.achievementsTitle {
+  font-size: 14px; font-weight: 700; color: #F59E0B;
+}
+
+.achievementsList {
+  display: flex; flex-wrap: wrap; gap: var(--space-2);
+}
+
+.achievementChip {
+  display: inline-flex; align-items: center; gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  background-color: rgba(245,158,11,0.1);
+  border: 1px solid rgba(245,158,11,0.3);
+  border-radius: var(--radius-full);
+  font-size: 12px; font-weight: 700; color: #F59E0B;
+}
+
+/* ── Cancelled banner (Phase 5.1) ──────── */
+.cancelledBanner {
+  background: linear-gradient(90deg, #450a0a, #3f0707);
+  border-bottom: 1px solid #7f1d1d;
+  padding: var(--space-4) var(--space-6);
+}
+
+.cancelledCheck {
+  width: 40px; height: 40px; border-radius: 50%;
+  background-color: #EF4444;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px; font-weight: 800; color: #fff; flex-shrink: 0;
+}
+
+/* ── Cancelled ticket styling ──────────── */
+.ticketCancelled {
+  opacity: 0.75;
+  position: relative;
+}
+
+.ticketCancelled::after {
+  content: 'CANCELLED';
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%) rotate(-25deg);
+  font-size: 52px; font-weight: 900;
+  color: rgba(239, 68, 68, 0.15);
+  letter-spacing: 0.1em;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.cancelBadgeHeader {
+  font-size: 11px; font-weight: 800;
+  letter-spacing: 0.12em;
+  color: #EF4444;
+  background-color: rgba(239, 68, 68, 0.15);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: var(--radius-full);
+  padding: 3px var(--space-3);
+}
+
+/* ── Cancel ticket button ──────────────── */
+.cancelTicketBtn {
+  padding: var(--space-3) var(--space-5);
+  font-size: 14px; font-weight: 600;
+  color: #EF4444;
+  background: none;
+  border: 1px solid rgba(239, 68, 68, 0.35);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.cancelTicketBtn:hover {
+  background-color: rgba(239, 68, 68, 0.08);
+  border-color: #EF4444;
+}
