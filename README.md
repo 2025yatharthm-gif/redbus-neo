@@ -175,21 +175,6 @@ LocalStorage
 
 ⸻
 
-📷 Screenshots
-
-Add screenshots of:
-
-* Home Page
-* Search Results
-* Seat Selection
-* Passenger Details
-* Booking Confirmation
-* My Bookings
-* Ticket Cancellation
-* Performance Dashboard
-
-⸻
-
 🚀 Installation
 
 Clone the repository:
