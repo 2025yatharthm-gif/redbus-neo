@@ -265,7 +265,7 @@ Faculty Guide: Prof. Prasad Junghare
 
 College: ITM Skills University
 
-Academic Year: 2025–2026
+Academic Year: 2025–2029
 
 ⸻
 
